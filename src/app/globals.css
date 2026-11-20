@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --background: #000000;
+  --white: #ffffff;
+  --blue: #078cff;
+  --red: #ff0018;
+  --green: #00d66b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--background);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.htgsrs-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 22px 4%;
+  background: #000000;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+.site-header {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #123d65;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: min(420px, 60vw);
+  height: 100px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.profile-button {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #078cff;
+  border-radius: 50%;
+  background: #020b18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 14px #007bff88;
+}
+
+/* COUNTDOWN SECTION */
+
+.countdown-section {
+  min-height: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 35px 10px;
+  border-bottom: 1px solid #123d65;
+  text-align: center;
+}
+
+.lock-icon {
+  width: 76px;
+  height: 76px;
+  filter: drop-shadow(0 0 12px #ff0018);
+}
+
+/* LAUNCH COUNTDOWN - ELECTRIC BLUE */
+
+.countdown-heading {
+  margin: 0;
+  color: #078CFF;
+  font-size: clamp(20px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-shadow: none;
+}
+
+/* SHARP COUNTDOWN TIMER */
+
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 28px);
+
+  color: #ffffff;
+  font-size: clamp(42px, 7vw, 76px);
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  font-variant-numeric: tabular-nums;
+  text-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.countdown-timer * {
+  text-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.countdown-timer span {
+  color: #ffffff;
+  opacity: 1;
+  font-weight: 900;
+  text-shadow: none !important;
+}
+
+.countdown-timer b {
+  color: #168BFF;
+  font-weight: 500;
+  text-shadow: none !important;
+}
+
+/* UPCOMING STATUS */
+
+.countdown-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 5px;
+
+  color: #00d66b;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-shadow: none;
+}
+
+.countdown-status .status-dot {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #00d66b;
+}
+
+/* MISSION AND VISION */
+
+.content-section {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 32px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.content-section article h2 {
+  margin: 0 0 12px;
+  font-size: clamp(23px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.content-section article h2 span:last-child {
+  color: #078cff;
+}
+
+.section-mark {
+  color: #078cff;
+  margin-right: 12px;
+}
+
+.content-section article p {
+  margin: 10px 0;
+  max-width: 1400px;
+  color: #e4e4e4;
+  font-size: clamp(15px, 1.5vw, 21px);
+  line-height: 1.65;
+  letter-spacing: 0.2px;
+}
+
+/* FOOTER */
+
+.site-footer {
+  border-top: 1px solid #123d65;
+  padding: 22px 0 10px;
+  text-align: center;
+  color: #8996a8;
+  letter-spacing: 9px;
+  font-weight: 700;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+  .htgsrs-page {
+    padding: 12px 5%;
+  }
+
+  .site-header {
+    min-height: 75px;
+  }
+
+  .brand-logo {
+    width: 230px;
+    height: 65px;
+  }
+
+  .profile-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .countdown-section {
+    min-height: 230px;
+  }
+
+  .countdown-timer {
+    gap: 6px;
+    letter-spacing: 0;
+    font-size: clamp(32px, 9vw, 52px);
+  }
+
+  .countdown-status {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .content-section {
+    padding: 25px 4px;
+    gap: 24px;
+  }
+}
